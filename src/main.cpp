@@ -1,8 +1,12 @@
 #include <uWS/uWS.h>
+#define _USE_MATH_DEFINES // for C++
+#include <cmath>
 #include <iostream>
 #include "json.hpp"
 #include "PID.h"
 #include <math.h>
+#define _USE_MATH_DEFINES // for C++
+#include <cmath>
 
 // for convenience
 using json = nlohmann::json;
