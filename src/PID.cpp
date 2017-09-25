@@ -11,6 +11,10 @@ PID::PID() {}
 PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) {
+	// Initialize PID  coefficients
+	Kp = 0;
+	Ki = 0;
+	Kd = 0;
 }
 
 void PID::UpdateError(double cte) {
