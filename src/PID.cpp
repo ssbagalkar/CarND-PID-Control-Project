@@ -8,6 +8,7 @@ using namespace std;
 
 PID::PID() {}
 
+
 PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) {
@@ -15,13 +16,14 @@ void PID::Init(double Kp, double Ki, double Kd) {
 	Kp = 0;
 	Ki = 0;
 	Kd = 0;
+	is_initialized = true;
 }
 
 void PID::UpdateError(double cte) {
 }
 
 double PID::TotalError() {
-	double a = 0;
-	return a;
+	double total_error = p_error * Kp + d_error * Kd + i_error * Ki;
+	return total_error;
 }
 

@@ -41,6 +41,9 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+  // initialization flag
+  bool is_initialized;
 };
 
 #endif /* PID_H */
