@@ -60,7 +60,11 @@ int main()
           * NOTE: Feel free to play around with the throttle and speed. Maybe use
           * another PID controller to control the speed!
           */
-		  steer_value = pid.TotalError();
+		  // Initialize the PID coeffs
+		  if (!pid.initialized())
+			  steer_value = pid.TotalError();
+		  else
+			  pid.Init(pid.Kp,pid.Ki,pid.Kd);
           // DEBUG
 
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
