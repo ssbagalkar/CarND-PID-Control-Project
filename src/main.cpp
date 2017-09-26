@@ -62,9 +62,15 @@ int main()
           */
 		  // Initialize the PID coeffs
 		  if (!pid.initialized())
+		  {
 			  steer_value = pid.TotalError();
+		  }
+			  
 		  else
-			  pid.Init(pid.Kp,pid.Ki,pid.Kd);
+		  {
+			  pid.Init(pid.Kp, pid.Ki, pid.Kd);
+		  }
+			 
           // DEBUG
 
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
