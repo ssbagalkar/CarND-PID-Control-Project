@@ -64,9 +64,8 @@ int main()
 		  
 			// Update the error
 			pid.UpdateError(cte);
-			std::cout << "p error is :" << pid.p_error << std::endl;
-			std::cout << "i error is :" << pid.i_error << std::endl;
-			std::cout << "d error is :" << pid.d_error << std::endl;
+
+			// calculate steer value
 			steer_value = pid.TotalError();
 		  
 			 
