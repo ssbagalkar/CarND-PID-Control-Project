@@ -63,12 +63,12 @@ int main()
 		  // Initialize the PID coeffs
 		  if (!pid.initialized())
 		  {
-			  steer_value = pid.TotalError();
+			  pid.Init(pid.Kp, pid.Ki, pid.Kd);
 		  }
 			  
 		  else
 		  {
-			  pid.Init(pid.Kp, pid.Ki, pid.Kd);
+			  steer_value = pid.TotalError();
 		  }
 			 
           // DEBUG
