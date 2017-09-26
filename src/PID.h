@@ -20,7 +20,7 @@ public:
   /*
   * Constructor
   */
-  PID();
+  PID() : is_initialized(false) {};
 
   /*
   * Destructor.
