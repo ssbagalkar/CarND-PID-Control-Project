@@ -13,9 +13,9 @@ PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) {
 	// Initialize PID  coefficients
-	this->Kp = -0.5;
-	this->Ki = 0;
-	this->Kd = -0.5;
+	this->Kp = -0.1;
+	this->Ki = 0.00001;
+	this->Kd = -0.9;
 
 	d_error = 0;
 	p_error = 0;
