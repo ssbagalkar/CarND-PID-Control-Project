@@ -20,12 +20,12 @@ public:
   /*
   * Constructor
   */
-  PID() : is_initialized(false) {};
+  PID() {};
 
   /*
   * Destructor.
   */
-  virtual ~PID();
+  virtual ~PID() {};
 
   /*
   * Initialize PID.
@@ -42,15 +42,7 @@ public:
   */
   double TotalError();
 
-  // initialization flag
-  bool is_initialized;
-
-  /**
-  * initialized Returns whether PID coeffs are initialized yet or not.
-  */
-  const bool initialized() const {
-	  return is_initialized;
-  }
+ 
 };
 
 #endif /* PID_H */
