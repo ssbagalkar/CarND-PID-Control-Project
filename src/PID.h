@@ -20,12 +20,12 @@ public:
   /*
   * Constructor
   */
-  PID() {};
+  PID() ;
 
   /*
   * Destructor.
   */
-  virtual ~PID() {};
+  virtual ~PID() ;
 
   /*
   * Initialize PID.
