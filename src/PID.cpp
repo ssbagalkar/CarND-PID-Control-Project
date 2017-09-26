@@ -6,10 +6,10 @@ using namespace std;
 * TODO: Complete the PID class.
 */
 
-//PID::PID() {}
+PID::PID() {}
 
 
-//PID::~PID() {}
+PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) {
 	// Initialize PID  coefficients
@@ -21,7 +21,6 @@ void PID::Init(double Kp, double Ki, double Kd) {
 	p_error = 0;
 	i_error = 0;
 
-	is_initialized = true;
 }
 
 void PID::UpdateError(double cte) {
